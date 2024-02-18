@@ -23,32 +23,32 @@ function kjopBillett() {
 
     // Check and accumulate specific error messages
     if (valgtFilm === "") {
-        errorMessages.push({ inputId: 'velgFilm', message: "Vennligst velg en film." });
+        errorMessages.push({inputId: 'velgFilm', message: "Vennligst velg en film."});
     }
 
     if (!antallRegex.test(antallInput)) {
-        errorMessages.push({ inputId: 'antall', message: "Vennligst skriv inn et gyldig billet antall." });
+        errorMessages.push({inputId: 'antall', message: "Vennligst skriv inn et gyldig billet antall."});
     }
 
     if (navnInput === "") {
-        errorMessages.push({ inputId: 'navn', message: "Vennligst fyll ut Fornavn." });
+        errorMessages.push({inputId: 'navn', message: "Vennligst fyll ut Fornavn."});
     }
 
     if (etterNavnInput === "") {
-        errorMessages.push({ inputId: 'etterNavn', message: "Vennligst fyll ut Etternavn." });
+        errorMessages.push({inputId: 'etterNavn', message: "Vennligst fyll ut Etternavn."});
     }
 
     if (!telefonRegex.test(telefonInput)) {
-        errorMessages.push({ inputId: 'telefon', message: "Vennligst skriv inn et gyldig telefonnummer." });
+        errorMessages.push({inputId: 'telefon', message: "Vennligst skriv inn et gyldig telefonnummer."});
     }
 
     if (!emailRegex.test(epostInput)) {
-        errorMessages.push({ inputId: 'epost', message: "Vennligst skriv inn en gyldig e-postadresse." });
+        errorMessages.push({inputId: 'epost', message: "Vennligst skriv inn en gyldig e-postadresse."});
     }
 
     // Display all accumulated error messages
     if (errorMessages.length > 0) {
-        errorMessages.forEach(({ inputId, message }) => {
+        errorMessages.forEach(({inputId, message}) => {
             displayErrorMessage(message, `${inputId}Error`);
         });
         return;
